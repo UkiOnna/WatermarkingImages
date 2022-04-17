@@ -51,9 +51,11 @@ namespace WatermarkApp
             this.VerticalAlignment = VerticalAlignment.Bottom;
             this.Zoom = 1.0;
             this.Margin = 20.0;
+            this.Opacity = 1.0;
         }
 
         private double margin;
+        private double opacity;
         private double zoom;
 
         public double Zoom
@@ -89,6 +91,18 @@ namespace WatermarkApp
             get
             {
                 return new Thickness(this.Margin);
+            }
+        }
+
+        public double Opacity
+        {
+            get { return opacity; }
+            set
+            {
+                if (opacity == value)
+                    return;
+                opacity = value;
+                OnPropertyChange(nameof(Opacity));
             }
         }
 

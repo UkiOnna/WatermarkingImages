@@ -123,6 +123,7 @@
                                    Margin="{Binding ImageMargin}"
                                    Width="{Binding Width}"
                                    Height="{Binding Height}"
+                                   Opacity="{Binding Opacity}"
                                    Stretch="Uniform" />
                         </DataTemplate>
                         <DataTemplate DataType="{x:Type local:TextWatermarkViewModel}">
@@ -262,6 +263,14 @@
                                         Maximum="500.0"
                                         IsSnapToTickEnabled="False"
                                         Value="{Binding Margin, Mode=TwoWay}">
+
+                                </Slider>
+
+                                <Label Content="Opacity" />
+                                <Slider Minimum="0.1"
+                                        Maximum="1.0"
+                                        IsSnapToTickEnabled="False"
+                                        Value="{Binding Opacity, Mode=TwoWay}">
 
                                 </Slider>
 
