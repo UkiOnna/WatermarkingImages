@@ -134,6 +134,7 @@
                                        Margin="{Binding ImageMargin}"
                                        TextWrapping="Wrap"
                                        FontFamily="{Binding Font}"
+                                       Opacity="{Binding Opacity}"
                                        Foreground="{Binding FontBrush}">
                                 <TextBlock.BitmapEffect>
                                     <DropShadowBitmapEffect Color="{Binding ShadowBrush}"
@@ -297,6 +298,14 @@
                                         Maximum="500.0"
                                         IsSnapToTickEnabled="False"
                                         Value="{Binding Margin, Mode=TwoWay}">
+                                </Slider>
+
+                                <Label Content="Opacity" />
+                                <Slider Minimum="0.1"
+                                        Maximum="1.0"
+                                        IsSnapToTickEnabled="False"
+                                        Value="{Binding Opacity, Mode=TwoWay}">
+
                                 </Slider>
 
                                 <Label Content="Text" />

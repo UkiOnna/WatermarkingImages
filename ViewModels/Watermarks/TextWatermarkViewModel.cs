@@ -17,6 +17,7 @@ namespace WatermarkApp
         private double size = 30;
         private string text;
         private double margin = 6;
+        private double opacity = 1;
 
         public TextWatermarkViewModel(WindowViewModel parent)
             : base(parent)
@@ -118,6 +119,18 @@ namespace WatermarkApp
                 margin = value;
                 OnPropertyChange(nameof(Margin));
                 OnPropertyChange(nameof(ImageMargin));
+            }
+        }
+
+        public double Opacity
+        {
+            get { return opacity; }
+            set
+            {
+                if (opacity == value)
+                    return;
+                opacity = value;
+                OnPropertyChange(nameof(Opacity));
             }
         }
 
