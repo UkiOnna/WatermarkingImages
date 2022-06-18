@@ -10,7 +10,7 @@ namespace WatermarkApp
     {
         private VerticalAlignment verticalAlignment;
         private HorizontalAlignment horizontalAlignment;
-
+        
         public HorizontalAlignment HorizontalAlignment
         {
             get { return horizontalAlignment; }

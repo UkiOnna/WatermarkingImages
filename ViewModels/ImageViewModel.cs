@@ -37,8 +37,8 @@ namespace WatermarkApp
                 {
                     using (var img = new MagickImage(path))
                     {
-                        img.AutoOrient();   // Fix orientation
-                        img.Strip();        // remove all EXIF information
+                        img.AutoOrient();
+                        img.Strip();
 
                         if (img.Width > 1920 || img.Height > 1920)
                         {

@@ -125,15 +125,6 @@ namespace WatermarkApp
                         return new SolidColorBrush(this.FillColor);
                     case GradientMode.Linear:
                         var toReturn = new LinearGradientBrush(gradientStops);
-                        // At 0, should be   (0,   0),   (1,   1)
-                        // At 45, should be  (0,   0.5), (1,   0.5)
-                        // At 90, should be  (0,   1),   (1,   0)
-                        // At 135, should be (0.5, 1),   (0.5, 0)
-                        // At 180, should be (1,   1),   (0,   0)
-                        // At 225, should be (1,   0.5), (0,   0.5)
-                        // At 270, should be (1,   0),   (0,   1)
-                        // At 315, should be (0.5, 0),   (0.5, 1)
-                        // At 360, should be (0,   0),   (1,   1)
 
                         var startX = GetStartXFromAngle(this.GradientAngle);
                         var startY = GetStartXFromAngle((this.GradientAngle + 90.0) % 360.0);

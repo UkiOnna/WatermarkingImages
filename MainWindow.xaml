@@ -30,13 +30,9 @@
             <MenuItem Header="_File">
                 <MenuItem Header="_Export Current Image..."
                           Command="{Binding ExportImage}" />
-                <MenuItem Header="Expor_t Project..."
-                          Command="{Binding Export}" />
                 <Separator />
-                <MenuItem Header="Load Settings..."
-                          Command="{Binding LoadSettings}" />
-                <MenuItem Header="Save Settings..."
-                          Command="{Binding SaveSettings}" />
+                <MenuItem Header="About Author"
+                          Command="{Binding AboutAuthor}" />
                 <Separator />
                 <MenuItem Header="E_xit" 
                           Command="{Binding Exit}"/>
@@ -82,9 +78,6 @@
                                         <ColumnDefinition Width="Auto" />
                                         <ColumnDefinition />
                                     </Grid.ColumnDefinitions>
-
-                                    <CheckBox IsChecked="{Binding IsSelected, Mode=TwoWay}"
-                                              VerticalAlignment="Center" />
 
                                     <StackPanel HorizontalAlignment="Center"
                                                 Grid.Column="1"

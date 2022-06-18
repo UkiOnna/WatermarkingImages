@@ -73,6 +73,7 @@ namespace WatermarkApp
         public ICommand Export { get; }
 
         public ICommand LoadSettings { get; }
+        public ICommand AboutAuthor { get; }
 
         public ICommand SaveSettings { get; }
 
@@ -147,6 +148,10 @@ namespace WatermarkApp
             this.ExportImage = ReactiveUI.ReactiveCommand.Create(() => this.OnExportImage(true));
             this.LoadSettings = ReactiveUI.ReactiveCommand.Create(this.OnLoadSettings);
             this.SaveSettings = ReactiveUI.ReactiveCommand.Create(this.OnSaveSettings);
+            AboutAuthor = ReactiveUI.ReactiveCommand.Create(() =>
+            {
+                MessageBox.Show("Author: Sikirov Temirlan VTiPO 1810\nMade for graduate work", "Author");
+            });
         }
 
         public void CleanUpTempImages()
@@ -171,7 +176,7 @@ namespace WatermarkApp
 
             var images = new List<string>();
 
-            foreach (var globPattern in new[] { "*.jpg", "*.jpeg" })
+            foreach (var globPattern in new[] { "*.jpg", "*.jpeg", "*.png" })
             {
                 var searchResult = Directory.GetFiles(this.RootPath, globPattern);
                 if (searchResult.Any())

@@ -25,8 +25,8 @@ namespace WatermarkApp
                 || path.EndsWith(".jpeg", StringComparison.InvariantCultureIgnoreCase))
             {
                 var img = new MagickImage(path);
-                img.AutoOrient();   // Fix orientation
-                img.Strip();        // remove all EXIF information
+                img.AutoOrient();
+                img.Strip();
 
                 var memoryStream = new MemoryStream();
                 img.Write(memoryStream);

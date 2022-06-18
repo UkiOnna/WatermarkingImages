@@ -12,8 +12,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <None Remove="default.jpg" />
-    <None Remove="default.png" />
     <None Remove="icon.ico" />
   </ItemGroup>
 
@@ -26,10 +24,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Resource Include="default.jpg" />
-    <Resource Include="default.png">
-      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-    </Resource>
     <Resource Include="icon.ico" />
   </ItemGroup>
 
